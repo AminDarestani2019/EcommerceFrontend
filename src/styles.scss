@@ -1,0 +1,103 @@
+/* You can add global styles to this file, and also import other style files */
+@font-face {
+    font-family: 'IRANSans';
+    font-style: normal;
+    font-weight: bold;
+    src: url('./assets/fonts/eot/IRANSansWeb_Bold.eot');
+    src: url('./assets/fonts/eot/IRANSansWeb_Bold.eot?#iefix') format('embedded-opentype'), url('./assets/fonts/woff2/IRANSansWeb_Bold.woff2') format('woff2'),
+      url('./assets/fonts/woff/IRANSansWeb_Bold.woff') format('woff'), url('./assets/fonts/ttf/IRANSansWeb_Bold.ttf') format('truetype');
+  }
+  
+  @font-face {
+    font-family: 'IRANSans';
+    font-style: normal;
+    font-weight: 500;
+    src: url('./assets/fonts/eot/IRANSansWeb_Medium.eot');
+    src: url('./assets/fonts/eot/IRANSansWeb_Medium.eot?#iefix') format('embedded-opentype'), url('./assets/fonts/woff2/IRANSansWeb_Medium.woff2') format('woff2'),
+      url('./assets/fonts/woff/IRANSansWeb_Medium.woff') format('woff'), url('./assets/fonts/ttf/IRANSansWeb_Medium.ttf') format('truetype');
+  }
+  
+  @font-face {
+    font-family: 'IRANSans';
+    font-style: normal;
+    font-weight: 300;
+    src: url('./assets/fonts/eot/IRANSansWeb_Light.eot');
+    src: url('./assets/fonts/eot/IRANSansWeb_Light.eot?#iefix') format('embedded-opentype'), url('./assets/fonts/woff2/IRANSansWeb_Light.woff2') format('woff2'),
+      url('./assets/fonts/woff/IRANSansWeb_Light.woff') format('woff'), url('./assets/fonts/ttf/IRANSansWeb_Light.ttf') format('truetype');
+  }
+  
+  @font-face {
+    font-family: 'IRANSans';
+    font-style: normal;
+    font-weight: 200;
+    src: url('./assets/fonts/eot/IRANSansWeb_UltraLight.eot');
+    src: url('./assets/fonts/eot/IRANSansWeb_UltraLight.eot?#iefix') format('embedded-opentype'), url('./assets/fonts/woff2/IRANSansWeb_UltraLight.woff2') format('woff2'),
+      url('./assets/fonts/woff/IRANSansWeb_UltraLight.woff') format('woff'), url('./assets/fonts/ttf/IRANSansWeb_UltraLight.ttf') format('truetype');
+  }
+  
+  @font-face {
+    font-family: 'IRANSans';
+    font-style: normal;
+    font-weight: normal;
+    src: url('./assets/fonts/eot/IRANSansWeb.eot');
+    src: url('./assets/fonts/eot/IRANSansWeb.eot?#iefix') format('embedded-opentype'), url('./assets/fonts/woff2/IRANSansWeb.woff2') format('woff2'),
+      url('./assets/fonts/woff/IRANSansWeb.woff') format('woff'), url('./assets/fonts/ttf/IRANSansWeb.ttf') format('truetype');
+  }
+  
+@import '../node_modules/@fortawesome/fontawesome-free/css/all.min.css';
+@import '../node_modules/bootstrap/dist/css/bootstrap.rtl.css';
+
+
+body {
+    font-family: IRANSans !important;
+    line-height: 1.5;
+    direction: rtl;
+  }
+  //angular material theme
+@import '@angular/material/prebuilt-themes/indigo-pink.css';
+@import '../node_modules/ngx-toastr/toastr.css';
+//default
+//spinner
+@import '../node_modules/ngx-spinner/animations/square-jelly-box.css';
+.spinner-text {
+  font-size: 1.3rem;
+  color: white;
+  margin-top: 2.2rem;
+}
+html, body { height: 100%; }
+body { margin: 0; font-family: Roboto, "Helvetica Neue", sans-serif; }
+
+h1,h2,h3,h4,h5,h6{
+  font-family: IRANSans !important;
+}
+.ff-IranSans{
+  font-family: IRANSans !important;
+}
+//configure sidenav material 
+.mat-sidenav{
+  width: 260px;
+  padding: 2px;
+  margin-left:20px ;
+}
+.mat-content{
+  min-height: 400px;
+  padding: 0px 15px;
+  overflow: hidden;
+  margin: 0 !important;
+
+  @media(min-width:960px){
+    padding-right: 265px;
+  }
+}
+
+// breadcrumb
+.xng-breadcrumb-root {
+  padding: 8px 16px;
+  display: inline-block;
+  border-radius: 4px;
+  background-color: rgb(171, 226, 253);
+}
+
+.xng-breadcrumb-separator {
+  padding: 0 4px;
+}

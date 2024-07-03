@@ -1,0 +1,61 @@
+import { Component, OnInit } from '@angular/core';
+import { AccountService } from '../account/account.service';
+import { ActivatedRoute } from '@angular/router';
+
+@Component({
+  selector: 'app-profile',
+  templateUrl: './profile.component.html',
+  styleUrl: './profile.component.scss'
+})
+export class ProfileComponent implements OnInit {
+  public sidenavOpen : boolean = true;
+  public title : string='';
+  public links =[
+    {
+      name: 'اطلاعات شخصی',
+      href: 'information',
+      icon: 'fa-solid fa-circle-info',
+      attachFiles: false
+    },
+    {
+      name: 'سفارش های من',
+      href: 'orders',
+      icon: 'fas fa-tabel-list',
+      attachFiles: true
+    },
+    {
+      name: 'کالاهای مورد علاقه',
+      href: 'favorites',
+      icon: 'fa-solid fa-thumbs-up',
+      attachFiles: false
+    },
+    {
+      name: 'نشانی ها',
+      href: 'addresses',
+      icon: 'fa-solid fa-location-dot',
+      attachFiles: false
+    },
+    {
+      name: 'نظرات',
+      href: 'comments',
+      icon: 'fa-solid fa-comment',
+      attachFiles: false
+    },
+    {
+      name: 'پیام ها',
+      href: 'notifications',
+      icon: 'fa-solid fa-bell',
+      attachFiles: false
+    },
+    {
+      name: 'تغییر کلمه عبور',
+      href: 'changePassword',
+      icon: 'fas fa-lock',
+      attachFiles: false
+    },
+  ];
+  constructor(public accountService:AccountService,private route: ActivatedRoute){}
+  ngOnInit(): void {
+    this.title = this.route?.snapshot?.firstChild?.data['title'];
+  }
+}
