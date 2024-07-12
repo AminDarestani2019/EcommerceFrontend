@@ -9,6 +9,10 @@ COPY --from=build /app/dist/edu-store-client/browser /usr/share/nginx/html
 COPY nginx/nginx.conf /etc/nginx/nginx.conf
 COPY nginx/nginx.conf /etc/nginx/conf.d/default.conf
 
+# کپی کردن گواهینامه‌ها
+COPY certs/nginx.crt /etc/nginx/ssl/nginx.crt
+COPY certs/nginx.key /etc/nginx/ssl/nginx.key
+
 COPY certbot/conf /etc/letsencrypt
 COPY certbot/www /var/www/certbot
 EXPOSE 443
