@@ -4,7 +4,7 @@
 
 export const environment = {
     production: false,
-    backendUrl: 'http://localhost:5085/api',
+    backendUrl: 'https://webapi:5085/api',
     keyLocalStorageBasket: 'basket_item',
     keySaveUser : 'user_token'
   };
