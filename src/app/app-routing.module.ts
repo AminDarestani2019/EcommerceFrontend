@@ -1,6 +1,7 @@
 import { NgModule } from '@angular/core';
 import { RouterModule, Routes } from '@angular/router';
 import { NotFoundComponent } from './core/Layers/not-found/not-found.component';
+import { skip } from 'rxjs';
 import { AuthGuard } from './core/guard/auth/auth.guard';
 
 const routes: Routes = [
@@ -25,8 +26,10 @@ const routes: Routes = [
   },
   {
     path:'checkout',
+    // canActivate: [AuthGuard],
     title:'پرداخت',
     loadChildren:() => import('./checkout/checkout.module').then((x)=>x.CheckoutModule),
+    // data:{breadcrumb:{skip:true}}
     data:{ breadcrumb:'پرداخت' }
   },
   {
